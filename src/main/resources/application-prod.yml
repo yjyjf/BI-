@@ -1,0 +1,53 @@
+# 线上配置文件
+server:
+  port: 8101
+spring:
+  # 数据库配置
+  # todo 需替换配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://xxxxxxxxxxx:3306/xxxx
+    username: xxx
+    password: xxxxxxxxxxx
+  # Redis 配置
+  # todo 需替换配置
+  session:
+    timeout: 42300
+    store-type: redis
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    timeout: 43200
+  #    password: 123456
+  #星火配置
+  ai:
+    appid: "xxxxxxxxxx"
+    apiKey: "xxxxxxxxxxxxx"
+    apiSecret: "xxxxxxxxxxxxxxxxx"
+    #消息队列配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: xxxxxxxx
+    password: xxxxxxxxxxxxxxxx
+  # Elasticsearch 配置
+  # todo 需替换配置
+#  elasticsearch:
+#    uris: http://localhost:9200
+#    username: root
+#    password: 123456
+mybatis-plus:
+  configuration:
+    log-impl: ''
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值（默认为 1）
+      logic-not-delete-value: 0 # 逻辑未删除值（默认为 0）
+# 接口文档配置
+#knife4j:
+#  basic:
+#    enable: true
+#    username: root
+#    password: 123456
